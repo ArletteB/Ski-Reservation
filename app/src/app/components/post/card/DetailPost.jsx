@@ -1,16 +1,7 @@
 import * as React from "react";
-import { Link } from "react-router-dom";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-import {
-  Card,
-  CardActions,
-  CardContent,
-  CardMedia,
-  Button,
-  Typography,
-} from "@mui/material";
-
-export default function PostCardMain({ post }) {
+export default function DetailPost({ post }) {
   return (
     <Card sx={{ width: "100%" }}>
       <CardMedia
@@ -23,17 +14,15 @@ export default function PostCardMain({ post }) {
           {post.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          {post.price}€ {post.weight}cm
+          {post.weight}cm {post.price}€ <br /> {post.style}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {post.description}
         </Typography>
+        <Typography variant="body2" color="text.secondary">
+          {post.comments}
+        </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">
-          <Link to={`/post/${post.id}`}>View</Link>
-        </Button>
-      </CardActions>
     </Card>
   );
 }

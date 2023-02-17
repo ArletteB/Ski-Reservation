@@ -1,7 +1,6 @@
 import { Box, Grid } from "@mui/material";
 import { useEffect, useState } from "react";
 import PostService from "../../../setup/services/post.service";
-import ApiService from "../../../setup/services/post.service";
 import PostCardMain from "./card/PostCardMain";
 
 const PostList = () => {
@@ -15,7 +14,6 @@ const PostList = () => {
     try {
       const response = await PostService.getAll();
       setPosts(response);
-      console.log(response);
     } catch (error) {
       console.log("Error fetching posts", error);
     }

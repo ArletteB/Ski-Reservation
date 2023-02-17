@@ -4,12 +4,12 @@ const POSTS_ENDPOINT = "/posts";
 
 const getAll = async () => {
   const response = await api.get(POSTS_ENDPOINT);
-  console.log(response);
   return response.data;
 };
 
 const getOne = async (id) => {
   const response = await api.get(`${POSTS_ENDPOINT}/${id}`);
+  console.log(response.data);
   return response.data;
 };
 
