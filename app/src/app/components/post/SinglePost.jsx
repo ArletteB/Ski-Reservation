@@ -5,7 +5,7 @@ import DetailPost from "./card/DetailPost";
 import { useParams } from "react-router-dom";
 
 const SinglePost = () => {
-  const id = useParams();
+  const { id } = useParams();
 
   const [onePost, setOnePost] = useState([]);
 
@@ -16,7 +16,7 @@ const SinglePost = () => {
   const fetchOnePost = async () => {
     try {
       const response = await PostService.getOne(id);
-      setOnePost(response);
+      setOnePost([response]);
       console.log(response);
     } catch (error) {
       console.log("Error fetching post", error);
@@ -26,9 +26,11 @@ const SinglePost = () => {
   return (
     <Box>
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4} key={id}>
-          <DetailPost post={id} />
-        </Grid>
+        {onePost.map((post) => (
+          <Grid item xs={12} sm={6} md={4} key={post.id}>
+            <DetailPost post={post} />
+          </Grid>
+        ))}
       </Grid>
     </Box>
   );

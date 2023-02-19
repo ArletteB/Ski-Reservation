@@ -31,7 +31,7 @@ export default function PostCardMain({ post }) {
       </CardContent>
       <CardActions>
         <Button size="small">
-          <Link to={`/post/${post.id}`}>View</Link>
+          <Link to={`/post/${post._id}`}>View</Link>
         </Button>
       </CardActions>
     </Card>
