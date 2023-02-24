@@ -1,11 +1,17 @@
 import PostList from "../components/post/PostList";
+import Search from "../components/search/Search";
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Posts list</h1>
-      <PostList />
-    </div>
+    <section>
+      <div>
+        <Search />
+      </div>
+      <div className="postlist">
+        <h1>Posts list</h1>
+        <PostList />
+      </div>
+    </section>
   );
 };
 

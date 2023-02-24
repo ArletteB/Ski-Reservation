@@ -45,7 +45,7 @@
 .container .right-side ul li p {
   opacity: 0.5;
 }
-.container .right-side ul li h3 {
+.container .right-side ul li input {
   margin: -0.5rem 0;
 }
 .container .right-side .btn {

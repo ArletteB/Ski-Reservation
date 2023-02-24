@@ -16,11 +16,11 @@ export default function Reservation() {
         <ul>
           <li>
             <p>Numéro</p>
-            <h3>079986182</h3>
+            <input type="number" placeholder="079986182"></input>
           </li>
           <li>
             <p>Date</p>
-            <h3>13 Feb 2023</h3>
+            <input type="date" placeholder="01 03 2023"></input>
           </li>
         </ul>
         <button class="btn">Confirmation de réservation</button>

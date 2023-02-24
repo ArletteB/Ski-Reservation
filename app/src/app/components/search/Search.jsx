@@ -1,63 +1,56 @@
+import { Stack } from "@mui/system";
 import * as React from "react";
-import {
-  styled,
-  AppBar,
-  Box,
-  Toolbar,
-  Typography,
-  InputBase,
-} from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
-
-const SearchIconWrapper = styled("div")(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: "100%",
-  position: "absolute",
-  pointerEvents: "none",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: "inherit",
-  "& .MuiInputBase-input": {
-    padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create("width"),
-    width: "100%",
-    [theme.breakpoints.up("md")]: {
-      width: "20ch",
-    },
-  },
-}));
+import "../../../index.css";
 
 export default function Search({ post }) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            Material-UI
-          </Typography>
-          <Search>
-            <SearchIconWrapper>
-              <SearchIcon />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Search>
-          <Box sx={{ flexGrow: 1 }} />
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <Stack direction="horizontal">
+      <section id="hero">
+        <div class="search">
+          <div class="searchwrapper">
+            <div class="searchbox">
+              <div class="row">
+                <div class="col-md-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Rechercher par adresse"
+                  ></input>
+                </div>
+                <div class="col-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Poids"
+                  ></input>
+                </div>
+                <div class="col-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Style"
+                  ></input>
+                </div>
+                <div class="col-md-2">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Taille"
+                  ></input>
+                </div>
+
+                <div class="col-md-1">
+                  <input
+                    type="button"
+                    class="btn btn-primary form-control"
+                    value="Search"
+                  ></input>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </Stack>
   );
 }

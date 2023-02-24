@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import SinglePost from "../components/post/SinglePost";
 import Reservation from "../components/reservation/Reservation";
 import SigninPage from "../pages/auth/SigninPage";
+import Search from "../components/search/Search";
 import SignupPage from "../pages/auth/SingupPage";
 import HomePage from "../pages/HomePage";
 
@@ -14,6 +15,7 @@ const MainRouter = () => {
         <Route path="/auth/signup" element={<SignupPage />} />
         <Route path="/post/:id" element={<SinglePost />} />
         <Route path="/reservation" element={<Reservation />} />
+        <Route path="/search" element={<Search />} />
       </Routes>
     </>
   );
