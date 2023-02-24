@@ -1,0 +1,114 @@
+/* RESERVATION */
+
+.container {
+  max-width: 1100px;
+  width: 900px;
+  padding: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e2622;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+}
+.container .left-side {
+  height: 500px;
+  flex: 3;
+}
+.container .left-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.container .right-side {
+  flex: 2;
+  text-align: left;
+  padding: 0 5rem 0 2rem;
+  color: #fff;
+  margin: 0;
+}
+.container .right-side h4 {
+  opacity: 0.5;
+  margin: -0.8rem 0 1.2rem 0;
+}
+.container .right-side ul {
+  margin-top: 3rem;
+  padding: 0;
+  list-style: none;
+}
+.container .right-side ul li {
+  margin: 2.5rem 0;
+}
+.container .right-side ul li p {
+  opacity: 0.5;
+}
+.container .right-side ul li h3 {
+  margin: -0.5rem 0;
+}
+.container .right-side .btn {
+  border: none;
+  outline: none;
+  background-color: #301d19;
+  color: #fff;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.container .right-side .btn:hover {
+  background-color: #f3f3f3;
+  color: #3e2622;
+  transition: 0.4s ease all;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 5rem 0;
+  }
+
+  .container {
+    width: 575px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #3e2622;
+  }
+  .container .left-side {
+    height: 450px;
+    flex: 3;
+  }
+  .container .left-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .container .right-side {
+    flex: 3;
+    text-align: center;
+    color: #fff;
+  }
+  .container .right-side ul {
+    margin-top: 3rem;
+    list-style: none;
+  }
+  .container .right-side .btn {
+    margin: 1.5rem 0;
+  }
+}
+@media (max-width: 550px) {
+  .container {
+    width: 425px;
+  }
+}
+@media (max-width: 400px) {
+  .container {
+    width: 100%;
+  }
+}

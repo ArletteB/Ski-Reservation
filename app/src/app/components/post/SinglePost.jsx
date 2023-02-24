@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Box, Grid } from "@mui/material";
 import DetailPost from "./card/DetailPost";
 import { useParams } from "react-router-dom";
+import Commentaire from "../commentaire/Commentaire";
 
 const SinglePost = () => {
   const { id } = useParams();
@@ -25,13 +26,23 @@ const SinglePost = () => {
 
   return (
     <Box>
-      <Grid container spacing={2}>
-        {onePost.map((post) => (
-          <Grid item xs={12} sm={6} md={4} key={post.id}>
-            <DetailPost post={post} />
-          </Grid>
-        ))}
-      </Grid>
+      <div>
+        <Grid>
+          <button className="back">
+            <a href="/">Retour</a>
+          </button>
+        </Grid>
+        <Grid container>
+          {onePost.map((post) => (
+            <Grid item xs={12} sm={6} md={4} key={post.id}>
+              <DetailPost post={post} />
+            </Grid>
+          ))}
+        </Grid>
+        <Grid container>
+          <Commentaire />
+        </Grid>
+      </div>
     </Box>
   );
 };
